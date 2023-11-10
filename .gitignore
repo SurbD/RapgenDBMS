@@ -1,0 +1,6 @@
+# Packages
+venv
+__pycache__
+
+code_snippets/
+.env

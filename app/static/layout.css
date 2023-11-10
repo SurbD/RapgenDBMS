@@ -1,0 +1,40 @@
+:root {
+    /* Color Variables   */
+    --background: #000208;
+    --primary: #0095ff;
+    --gray150: #f4f6fb;
+}
+
+body {
+    margin: 0;
+    background-color: var(--background);
+    font-family: 'Fira Code', san-serif;
+    box-sizing: border-box;
+    color: #f4f6fb;
+}
+
+header {
+    width: 100%;
+    border-bottom: var(--gray150);
+}
+
+.nav-container {
+    padding: 1.5rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-content ul {
+    display: flex;
+    list-style: none;
+    gap: 1.98rem;
+    font-size: 0.98rem;
+}
