@@ -8,6 +8,10 @@ from .forms import LoginForm
 def login():
     form = LoginForm()
 
+    if form.validate_on_submit():
+        print("In validate on submit")
+        admin = None # Query the database
+
     return render_template("login.html", form=form)
 
 

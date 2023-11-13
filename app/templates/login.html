@@ -5,13 +5,13 @@
     <div class="form-section">
         <div class="form-container">
             <div class="brand-logo"> 
-                Rapgen.
+                Rapgen<span class="emphasis">.</span>
             </div>
             <div class="form-card">
                 <form action="" method="POST">
                     {{ form.hidden_tag() }}
-                    <fieldset>
-                        <legend class="form-legend">Sign in to RapgenDBMS</legend>
+                    <div class="form-fieldset">
+                        <div class="form-legend">Sign in to RapgenDBMS</div>
                         <div class="login-form">
                             <div class="form-group">
                                 {{ form.email(class="input-box", placeholder="Your Email") }}
@@ -37,22 +37,23 @@
                             </div>
                             <div class="form-group">
                                 {{ form.submit(class="submit-btn") }}
-                                <p class="tiny-info">
-                                    <a href="{{ url_for("auth.reset_password") }}">Forgot Password?</a>
-                                </p>
+                                <a  class="tiny-info" href="{{ url_for("auth.reset_password") }}">Forgot Password?</a>
                             </div>
                         </div>
-                    </fieldset>
+                    </div>
                 </form>
                 <div class="login-with">
-                    <a href="" class="btn-lg">
-                        <div class="google-logo"></div>
-                        <span class="btn-text">Sign in with Google</span>
-                    </a>
-                    <a href="" class="btn-lg">
-                        <i class="apple-logo"></i>
-                        <span class="btn-text">Sign in with Apple</span>
-                    </a>
+                    <div class="form-break"><div class="dash"></div>or<div class="dash"></div></div>
+                    <div class="login-with-buttons ">
+                        <a href="" class="btn-lg">
+                            <div class="google-logo"></div>
+                            <span class="btn-text">Sign in with Google</span>
+                        </a>
+                        <a href="" class="btn-lg">
+                            <div class="apple-logo"></div>
+                            <span class="btn-text">Sign in with Apple</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -64,7 +65,8 @@
                 <div class="hero-card-text">
                     <h2 class="hero-card-h2">Unleash the <span class="emphasis">potential</span> of your data journey</h2>
                     <p class="hero-card-p">From exploration to actionable insights, RapgenDBMS makes 
-                        data management a walk in the park and we're just starting it gets better.</p>
+                        data management a walk in the park and we're just starting, 
+                        it gets better.</p>
                 </div>
                 <a href="" class="cta-btn">Get started</a>
             </div>
