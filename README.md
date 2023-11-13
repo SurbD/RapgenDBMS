@@ -1,7 +1,7 @@
 # RAPGEN DATABASE WEB APPLICATION
 ![Python](https://img.shields.io/badge/Python-14354C.svg?logo=python&logoColor=white) ![CSS](https://img.shields.io/badge/CSS-1572B6.svg?logo=css3&logoColor=white) ![HTML](https://img.shields.io/badge/HTML-E34F26.svg?logo=html5&logoColor=white) ![Postgres](https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white) ![Jinja](https://img.shields.io/badge/jinja-white.svg?style=for-the-badge&logo=jinja&logoColor=black)![Neovim](https://img.shields.io/badge/NeoVim-%2357A143.svg?&style=for-the-badge&logo=neovim&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-[![Author](https://img.shields.io/badge/Author-PyDevyn-orange)](https://github.com/surbd)
+[![Author](https://img.shields.io/badge/Author-Devyn-orange)](https://github.com/surbd)
 
 This application is to simplify the management of RAPGEN's data, so easy access to get and modify data with roles for each individual, making the data organised.
 
