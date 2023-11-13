@@ -42,6 +42,8 @@ class ConnDB:
         return None
 
     def __exit__(self, exc_type, exc_val, traceback):
+        # self.cursor.execute("ROLLBACK")
+        # self.connection.commit()
         if self.connection:
             self.cursor.close()
             self.cursorx.close()
@@ -70,6 +72,3 @@ class ConnDB:
     @staticmethod
     def init_app():
         pass
-
-# with ConnDB() as db:
-#     print(db.active)
