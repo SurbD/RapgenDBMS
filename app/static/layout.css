@@ -290,7 +290,7 @@ header {
 
 /* Flash Message */
 .flash-alert {
-    background-color: var(--gray300);
+    background-color: var(--gray400);
     padding: 1rem 1.2rem;
     font-size: 0.78rem;
 

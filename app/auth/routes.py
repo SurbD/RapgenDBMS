@@ -1,6 +1,6 @@
 from flask import flash, redirect, render_template, url_for, session, request
 from werkzeug.security import check_password_hash, generate_password_hash
-from flask_login import login_user
+from flask_login import login_user, logout_user, login_required
 
 from app.models import User
 
@@ -10,7 +10,7 @@ from .forms import LoginForm, RegisterationForm
 
 @auth.route("/login", methods=["GET", "POST"])
 def login():
-    # form validation will be done in the frontend later
+    # form validation will be done in the frontend later stop page refresh on submit
     form = LoginForm()
 
     if form.validate_on_submit():
@@ -24,7 +24,7 @@ def login():
             if next_page == '/logout':
                 next_page = None
 
-            del session['email']
+            session['email'] = None
             flash('Logged In successfully!', 'success')
             return redirect(next_page) if next_page else redirect(url_for('main.home'))
 
@@ -54,3 +54,10 @@ def register():
 def reset_password():
     return "Form for resetting password: Requires email and uses Axios to \
             send the request to send a verification code to the email of exists"
+
+@auth.route("/logout", methods=["POST", "GET"])
+@login_required
+def logout():
+    logout_user()
+    flash("Logged Out!, we'll be expecting you soon")
+    return redirect(url_for('auth.login'))
