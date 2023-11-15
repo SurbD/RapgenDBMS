@@ -1,5 +1,107 @@
-{% extends 'layout.html%}
+{% extends 'layout.html' %}
 
 {% block content %}
-    <h1>REGISTERATION PAGE</h1>
-{% endblock %}
+<div class="login-page">
+    <div class="form-section">
+        <div class="form-container">
+            <div class="brand-logo"> 
+                Rapgen<span class="emphasis">.</span>
+            </div>
+            <div class="form-card">
+                <form action="" method="POST">
+                    {{ form.hidden_tag() }}
+                    <div class="form-fieldset">
+                        <div class="form-legend">Join us today</div>
+                        <div class="login-form">
+                            <div class="form-group">
+                                {{ form.username(class="input-box", placeholder="Username") }}
+
+                                {% if form.username.errors  %}
+                                    <div class="invalid-form-data">
+                                        {% for error in form.username.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.email(class="input-box", placeholder="Email") }}
+
+                                {% if form.email.errors  %}
+                                    <div class="invalid-form-data">
+                                        {% for error in form.email.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.password(class="input-box", placeholder="Password") }}
+
+                                {% if form.password.errors  %}
+                                    <div class="invalid-form-data">
+                                        {% for error in form.password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.confirm_password(class="input-box", placeholder="Confirm Password") }}
+
+                                {% if form.confirm_password.errors  %}
+                                    <div class="invalid-form-data">
+                                        {% for error in form.confirm_password.errors %}
+                                            <span>{{ error }}</span>
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            </div>
+                            <div class="form-group">
+                                {{ form.submit(class="submit-btn") }}
+                                <a  class="tiny-info" href="{{ url_for("auth.login") }}">Already have an account?</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div class="registration-info">
+                    <small class="terms text-muted">By signing up, you agree to our <a href="">Terms of Service</a> and 
+                        <a href="">Privacy Policy</a>, including Cookie Use. RapgenDBMS may use your contact information, including 
+                        your email address and phone number for purposes outlined in our Privacy Policy, like keeping your account 
+                        secure and personalizing our services. <a href=""> Learn more </a>.</small>
+                </div>
+                
+                <!-- <div class="login-with"> -->
+                <!--     <div class="form-break"><div class="dash"></div>or<div class="dash"></div></div> -->
+                <!--     <div class="login-with-buttons "> -->
+                <!--         <a href="" class="btn-lg"> -->
+                <!--             <div class="google-logo"></div> -->
+                <!--             <span class="btn-text">Sign in with Google</span> -->
+                <!--         </a> -->
+                <!--         <a href="" class="btn-lg"> -->
+                <!--             <div class="apple-logo"></div> -->
+                <!--             <span class="btn-text">Sign in with Apple</span> -->
+                <!--         </a> -->
+                <!--     </div> -->
+                <!-- </div> -->
+            </div>
+        </div>
+    </div>
+    <div class="hero-section">
+        <!-- Hero Info Section -->
+        <div class="hero-card">
+            <div class="hero-card-info">
+                <div class="hero-card-text">
+                    <h2 class="hero-card-h2">Together we can make a <span class="emphasis">difference.</span></h2>
+                    <p class="hero-card-p">RAPGEN - Raising A Purposeful Generation is a dynamic open
+                    Christian community dedicated to African Youth Missions.</p>
+                </div>
+                <a href="" class="cta-btn">Join our community</a>
+            </div>
+            <div>
+                <image class="svg-illustration" src="../static/svgs/database_illus.svg" />
+            </div>
+        </div>
+    </div>
+</div>
+{%  endblock %}

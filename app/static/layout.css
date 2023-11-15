@@ -187,7 +187,7 @@ header {
 .form-group {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  /* gap: 0.4rem; */
   width: 100%;
 }
 
@@ -199,7 +199,7 @@ header {
   gap: 1.5rem;
 }
 
-.form-group:nth-child(3) {
+.form-group:last-child {
   margin-top: 1rem;
 }
 
@@ -325,3 +325,31 @@ header {
 .flash-alert-success {
     background-color: rgba(22, 240, 22, 0.41);
 }
+
+.terms {
+  font-size: 0.65rem;
+  font-weight: 200;
+  color: var(--gray300);
+  text-decoration-color: var(--accent);
+}
+
+.terms a {
+    color: var(--accent);
+}
+
+.registration-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.invalid-form-data {
+    color: rgba(255, 22, 22, 0.61);
+}
+
+.invalid-form-data span {
+    font-size: 0.75rem;
+}
+
+/* Logout Styling */
