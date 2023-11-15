@@ -8,13 +8,13 @@
                 Rapgen<span class="emphasis">.</span>
             </div>
             <div class="form-card">
-                <form action="" method="POST">
+                <form action="" method="POST" name="registration-form">
                     {{ form.hidden_tag() }}
                     <div class="form-fieldset">
                         <div class="form-legend">Join us today</div>
                         <div class="login-form">
                             <div class="form-group">
-                                {{ form.username(class="input-box", placeholder="Username") }}
+                                {{ form.username(class="input-box", placeholder="Username" }}
 
                                 {% if form.username.errors  %}
                                     <div class="invalid-form-data">
@@ -47,12 +47,12 @@
                                 {% endif %}
                             </div>
                             <div class="form-group">
-                                {{ form.confirm_password(class="input-box", placeholder="Confirm Password") }}
+                                {{ form.confirm_password(class="input-box", placeholder="Confirm password") }}
 
                                 {% if form.confirm_password.errors  %}
                                     <div class="invalid-form-data">
                                         {% for error in form.confirm_password.errors %}
-                                            <span>{{ error }}</span>
+                                            <span >{{ error }}</span>
                                         {% endfor %}
                                     </div>
                                 {% endif %}
@@ -70,20 +70,6 @@
                         your email address and phone number for purposes outlined in our Privacy Policy, like keeping your account 
                         secure and personalizing our services. <a href=""> Learn more </a>.</small>
                 </div>
-                
-                <!-- <div class="login-with"> -->
-                <!--     <div class="form-break"><div class="dash"></div>or<div class="dash"></div></div> -->
-                <!--     <div class="login-with-buttons "> -->
-                <!--         <a href="" class="btn-lg"> -->
-                <!--             <div class="google-logo"></div> -->
-                <!--             <span class="btn-text">Sign in with Google</span> -->
-                <!--         </a> -->
-                <!--         <a href="" class="btn-lg"> -->
-                <!--             <div class="apple-logo"></div> -->
-                <!--             <span class="btn-text">Sign in with Apple</span> -->
-                <!--         </a> -->
-                <!--     </div> -->
-                <!-- </div> -->
             </div>
         </div>
     </div>

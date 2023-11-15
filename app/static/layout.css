@@ -353,3 +353,86 @@ header {
 }
 
 /* Logout Styling */
+.logout-container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--deep-gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout-card {
+    background-color: var(--background);
+    padding: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.2rem;
+    width: 20%;
+    gap: 1.3rem;
+}
+
+.logout-confirmation {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    
+    
+}
+
+.logout-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.56rem;
+}
+
+.logout-text .htext{
+    font-weight: bold;
+    font-size: 0.98rem;
+    margin: 0;
+}
+
+.logout-text .btext {
+    font-size: 0.68rem;
+    margin: 0;
+    color: var(--gray500);
+}
+
+.logout-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.56rem;
+    text-align: center;
+}
+
+.logout-buttons form {
+    align-self: center;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+}
+
+.logout-btn {
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    border-radius: 0.5rem;
+    background-color: var(--accent);
+    padding: 0.5rem 1rem;
+    color: var(--gray200);
+    font-weight: 800;
+    font-size: 0.89rem;
+}
+
+
+.cancel-logout-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--gray300);
+    color: var(--gray200);
+    font-weight: bold;
+    font-size: 0.89rem;
+    border-radius: 1rem;
+    text-decoration: none;
+}
