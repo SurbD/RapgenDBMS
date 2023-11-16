@@ -1,0 +1,46 @@
+.unconfirmed {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--deep-gray);
+    justify-content: center;
+    align-items: center;
+}
+
+.unconfirmed-card {
+    background-color: var(--background);
+    padding: 1.6rem 1.6rem;
+    border-radius: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 0.2rem;
+}
+
+.unconfirmed-info .htext{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.unconfirmed-info .btext{
+    font-size: 0.88rem;
+}
+
+.unconfirmed-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.confirm-btn {
+    align-self: start;
+    border: none;
+    text-decoration: none;
+    padding: 0.68rem 0.8rem;
+    background-color: var(--accent);
+    border-radius: var(--bdrad);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--deep-gray);
+}

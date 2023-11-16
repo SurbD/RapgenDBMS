@@ -25,3 +25,8 @@ class RegisterationForm(FlaskForm):
         user = User.query.filter_by(email=email.data).first()
         if user:
             raise ValidationError('User with that email already exists. Try log in.')
+
+
+class VerificationForm(FlaskForm):
+    code = StringField('Verification Code', validators=[DataRequired()])
+    submit = SubmitField('Confirm')

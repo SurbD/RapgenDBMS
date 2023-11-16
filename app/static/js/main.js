@@ -12,5 +12,3 @@ function closeAlert() {
         }, 600)
     }
 }
-
-

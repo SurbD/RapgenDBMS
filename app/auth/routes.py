@@ -3,9 +3,23 @@ from werkzeug.security import check_password_hash, generate_password_hash
 from flask_login import login_user, logout_user, login_required, current_user
 
 from app.models import User, db
+from app.utils import send_mail
 
 from . import auth
-from .forms import LoginForm, RegisterationForm
+from .forms import LoginForm, RegisterationForm, VerificationForm
+
+
+@auth.before_app_request
+def before_request():
+    if current_user.is_authenticated and not current_user.confirmed \
+        and request.blueprint != 'auth' and request.endpoint != 'static':
+        return redirect(url_for('auth.unconfirmed'))
+
+@auth.route("/unconfirmed")
+def unconfirmed():
+    if current_user.is_anonymous or current_user.confirmed:
+        return redirect(url_for('main.home'))
+    return render_template('auth/unconfirmed.html')
 
 
 @auth.route("/login", methods=["GET", "POST"])
@@ -57,16 +71,10 @@ def register():
 
         db.session.add(user)
         db.session.commit()
-        
-        flash("Your account has been created successfully!. You can now login.", "success")
-        return redirect(url_for('auth.login'))
+        flash("Your account has been created successfully!!. You can now login.", "success")
+        return redirect(url_for('auth.login')) # Change to redirect to verification template
 
     return render_template("auth/register.html", form=form)
-
-@auth.route("/reset-password", methods=["GET", "POST"])
-def reset_password():
-    return "Form for resetting password: Requires email and uses Axios to \
-            send the request to send a verification code to the email of exists"
 
 @auth.route("/logout", methods=["POST", "GET"])
 @login_required
@@ -76,3 +84,49 @@ def logout():
         flash("Logged Out!, we'll be expecting you soon")
         return redirect(url_for('auth.login'))
     return render_template("auth/logout.html")
+
+@auth.route("/confirm-verification", methods=["GET", "POST"])
+@login_required
+def confirm_verification():
+    if current_user.confirmed:
+        return redirect(url_for("main.home"))
+
+    form = VerificationForm()
+
+    if form.validate_on_submit():
+        print('invalidate')
+        token = session.get('verification_token')
+        user = User.confirm_code(token, form.code.data)
+        if user:
+            user.confirmed = True
+            db.session.commit()
+            session.pop('verification_token')
+            flash("You're account has been verified!.You can now login.", "success")
+            return redirect(url_for('auth.login'))
+
+        print('not confirmed')
+        flash("Invalid verification code. please try again or request for another code", "danger")
+    print('emd of form')
+    return render_template("auth/verify_account.html", form=form)
+
+@auth.route("/verify-account")
+@login_required
+def verify_account():
+    token, code = current_user.get_verification_code().values()
+
+    send_mail(
+        to=current_user.email,
+        subject="Verify your RapgenDBMS account",
+        template="email/verify_account",
+        username=current_user.username, code=code
+    )
+
+    session['verification_token'] = token
+    flash("The verification code has been sent to your email", "success")
+    return redirect(url_for("auth.confirm_verification"))
+
+@auth.route("/reset-password")
+def reset_password():
+    """Nothing here for now"""
+
+    return {}

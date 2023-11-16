@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="verification-container">
+    <div class="verification-card">
+        <div class="brand-logo"> 
+            Rapgen<span class="emphasis">.</span>
+        </div>
+        <div class="verification-form">
+            <div class="v-info">
+                <p class="htext">Complete account verification</p>
+                <p class="btext">This will allow you to have access to the full features of the application.</p>
+            </div>
+            <div class="v-buttons">
+                <form action="" method="post" class="logout-form">
+                    {{ form.hidden_tag() }}
+        
+                    <div class="verification-inputs">
+                        {{ form.code(class="v-input-box v-80", placeholder="Verification Code") }}
+                        {{ form.submit(class="v-submit-btn v-20 verification-btn") }}
+                    </div>
+                </form>
+            </div>
+            <!-- Use Htmx Here -->
+            <a class="tiny-info"  href="{{ url_for('auth.verify_account')}}">Resend verification code</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -6,20 +6,9 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="{{ url_for('static', filename='layout.css' )}}" rel="stylesheet">
+        <script src="https://unpkg.com/htmx.org@1.9.8" integrity="sha384-rgjA7mptc2ETQqXoYC3/zJvkU7K/aP44Y+z7xQuJiVnB/422P/Ak+F/AqFR7E4Wr" crossorigin="anonymous"></script>
     </head>
     <body>
-        <!-- <header> -->
-        <!--     <nav class="nav-container"> -->
-        <!--         <div class="nav-content"> -->
-        <!--             <div class="logo">Rapgen</div> -->
-        <!--             <ul> -->
-        <!--                 <li class="nav-item">Dashboard</li> -->
-        <!--                 <li class="nav-item">Database Manager</li> -->
-        <!--                 <li class="nav-item">Profile</li> -->
-        <!--             </ul> -->
-        <!--         </div> -->
-        <!--     </nav> -->
-        <!-- </header> -->
         <main>
             <div class="container">
                 {% with messages = get_flashed_messages(with_categories=true) %}

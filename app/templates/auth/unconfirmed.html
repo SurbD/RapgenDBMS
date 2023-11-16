@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="unconfirmed">
+    <div class="unconfirmed-card">
+        <div class="brand-logo"> 
+            Rapgen<span class="emphasis">.</span>
+        </div>
+        <div class="unconfirmed-info">
+            <div class="unconfirmed-text-box">
+                <p class="htext">Hello, {{ current_user.username }}</p>
+                <p class="btext">Please verify your account, so we can confirm the email is vaild.
+                    This gives to access all the cool features of RapgenDBMS.</p>
+                <p class="btext"> To verify your account click the button below to send the verification code to your email.</p>
+            </div>
+            <a href="{{ url_for('auth.verify_account') }}" class="confirm-btn">Confirm Your Account</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
