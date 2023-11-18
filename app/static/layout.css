@@ -1,3 +1,4 @@
+@import url("./home_page.css");
 @import url("./svg-styling.css");
 @import url("./verification.css");
 @import url("./unconfirmed.css");
@@ -32,32 +33,6 @@ body {
   font-family: "montserratx", san-serif;
   box-sizing: border-box;
   color: var(--gray150);
-}
-
-header {
-  width: 100%;
-  border-bottom: var(--gray150);
-}
-
-.nav-container {
-  padding: 1.5rem;
-}
-
-.logo {
-  font-size: 1.5rem;
-}
-
-.nav-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-content ul {
-  display: flex;
-  list-style: none;
-  gap: 1.98rem;
-  font-size: 0.98rem;
 }
 
 .login-page {
@@ -441,4 +416,9 @@ header {
 
 .gap-it {
     gap: ${0};
+}
+.brand-logo {
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 900;
 }

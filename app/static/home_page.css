@@ -1,0 +1,71 @@
+/* HOME PAGE STYLING */
+
+.nav-logo {
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+.main-page-container {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 100fr;
+}
+
+.nav-container {
+    padding: 1.2rem;
+    /* border: 2px solid var(--accent); */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.content-container {
+    /* border: 2px solid paleturquoise; */
+    background-color: var(--deep-gray);
+}
+.content-container h1 {
+    margin: 0;
+}
+
+.dashboard-icon-svg svg {
+    /* fill: var(--accent); */
+    width: 34px;
+    height: 34px;
+}
+.database-icon-svg svg {
+    width: 34px;
+    height: 34px;
+}
+
+.table-icon-svg svg {
+    width: 34px;
+    height: 34px;
+}
+
+.logout-icon-svg svg {
+    width: 34px;
+    height: 34px;
+}
+
+.logout-icon-svg:hover {
+    #logout_svgg {
+        stroke: var(--accent);
+    }
+}
+
+
+/* .logout-icon-svg svg:hover { */
+/*     fill: var(--accent); */
+/*     stroke: var(--accent); */
+/* } */

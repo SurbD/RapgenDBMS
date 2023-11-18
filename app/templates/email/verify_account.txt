@@ -1,7 +1,7 @@
 Hello, {{ username }}
 Complete your account Verification
 
-There's one qsuick step you need to complete before your account gets full verified.
+There's one quick step you need to complete before your account gets full verified.
 Let's make sure this is the right email address for you, please confirm this is the 
 right email to use for your account.
 

@@ -101,7 +101,7 @@ def confirm_verification():
             user.confirmed = True
             db.session.commit()
             session.pop('verification_token')
-            flash("You're account has been verified!.You can now login.", "success")
+            flash("You're account has been verified!. You can now login.", "success")
             return redirect(url_for('auth.login'))
 
         print('not confirmed')
@@ -112,6 +112,8 @@ def confirm_verification():
 @auth.route("/verify-account")
 @login_required
 def verify_account():
+    if current_user.confirmed:
+        return redirect(url_for('main.home'))
     token, code = current_user.get_verification_code().values()
 
     send_mail(
