@@ -1,8 +1,9 @@
 /* HOME PAGE STYLING */
 
 .nav-logo {
-  font-size: 1.7rem;
-  font-weight: 900;
+    font-size: 1.7rem;
+    font-weight: 900;
+    cursor: pointer;
 }
 
 .main-page-container {
@@ -31,7 +32,6 @@
 }
 
 .content-container {
-    /* border: 2px solid paleturquoise; */
     background-color: var(--deep-gray);
 }
 .content-container h1 {
@@ -42,20 +42,50 @@
     /* fill: var(--accent); */
     width: 34px;
     height: 34px;
+    transition: all 0.3s ease 0s;
+}
+
+.dashboard-icon-svg svg {
+    /* fill: var(--accent); */
+    width: 34px;
+    height: 34px;
+    transition: all 0.3s ease 0s;
+}
+
+.dashboard-icon-svg:hover {
+    #dashboard-svgg {
+        fill: var(--accent);
+        stroke: var(--accent);
+    }
 }
 .database-icon-svg svg {
     width: 34px;
     height: 34px;
+    transition: all 0.3s ease 0s;
+}
+
+.database-icon-svg:hover {
+    #database-svgg {
+        stroke: var(--accent);
+        fill: var(--accent);
+    }
 }
 
 .table-icon-svg svg {
     width: 34px;
     height: 34px;
+    transition: all 0.3s ease 0s;
+}
+.table-icon-svg:hover {
+    #table-svgg {
+        stroke: var(--accent);
+    }
 }
 
 .logout-icon-svg svg {
     width: 34px;
     height: 34px;
+    transition: all 0.3s ease 0s;
 }
 
 .logout-icon-svg:hover {
@@ -65,7 +95,20 @@
 }
 
 
-/* .logout-icon-svg svg:hover { */
-/*     fill: var(--accent); */
-/*     stroke: var(--accent); */
-/* } */
+.file-input::-webkit-file-upload-button {
+    color: var(--gray200);
+    font-weight: 700;
+    padding: 0.5rem 0.8rem;
+    border: none;
+    background-color: var(--accent);
+    border-radius: var(--bdrad);
+}
+
+.file-input {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--accent);
+    padding: 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+}

@@ -36,6 +36,7 @@ def login():
 
         # if user and form.password.data == user.password:
         if user and check_password_hash(user.password, form.password.data):
+            # TODO: set remember state to 1day
             login_user(user, remember=True)
             next_page = request.args.get('next') # when login_required redirects to login
             if next_page == '/logout':
@@ -81,7 +82,7 @@ def register():
 def logout():
     if request.method == 'POST':
         logout_user()
-        flash("Logged Out!, we'll be expecting you soon")
+        flash("Logged Out!, we'll be expecting you soon", "info")
         return redirect(url_for('auth.login'))
     return render_template("auth/logout.html")
 

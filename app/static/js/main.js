@@ -6,9 +6,25 @@ function closeAlert() {
     } else {
         flash_card.classList.add("close-animation")
         setTimeout(() => {
-            
             flash_card.style.display = "none"
             flash-card.classList.remove("close-animation")
-        }, 600)
+        }, 500)
+        // window.location.href = "https://www.github.com/SurbD"; // Testing Redirect 
+    }
+}
+
+function validateFileType() {
+    var selectedFile = document.getElementById('file-input').files[0];
+    var allowedTypes = ['image/jpeg', 'image/png'];
+
+    if (!allowedTypes.includes(selectedFile.type)) {
+        // alert("Invalid file type. Please upload  a JPEG or PNG");
+        document.getElementById("file-error-mssg").innerHTML = 'Invalid file type. Use your head.';
+        document.getElementById('file-input').value = '';
+        // setTimeout(() => {
+        //     document.getElementById('file-error-mssg').innerHTML = ''
+        // }, 1000)
+    } else {
+        document.getElementById('file-error-mssg').innerText = '';
     }
 }
