@@ -43,7 +43,7 @@ def login():
                 next_page = None
 
             session['email'] = None
-            flash('Logged In successfully!', 'success')
+            # flash('Logged In successfully!', 'success')
             return redirect(next_page) if next_page else redirect(url_for('main.home'))
 
         flash('Invalid login information. Please check email or password and try again.', 'danger')

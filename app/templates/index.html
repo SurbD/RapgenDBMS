@@ -5,41 +5,110 @@
 {% block content %}
 <div class="main-page-container">
     <div class="nav-container">
-        <div class="nav-logo">
-            R<span class="emphasis">.</span>
-        </div>
-        <div class="nav-links">
-            <ul>
-                <!-- <li class="nav-link"><a href="">Dashboard Icon</a></li> -->
-                <!-- <li class="nav-link"><a href="">DB Manager Icon</a></li> -->
-                <!-- <li class="nav-link"><a href="">Table View Icon</a></li> -->
-                <div class="dashboard-icon-svg" title="Dashboard">
-                    <svg fill="#f6fbf4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard-svgg" class="icon glyph" stroke="#f6fbf4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect x="2" y="2" width="9" height="11" rx="2"></rect><rect x="13" y="2" width="9" height="7" rx="2"></rect><rect x="2" y="15" width="9" height="7" rx="2"></rect><rect x="13" y="11" width="9" height="11" rx="2"></rect></g></svg>
-                </div>
-                <div class="database-icon-svg" title="Database Manager">
-                    <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#f4f6fb" stroke="#f4f6fb"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="database-svgg" fill="#f4f6fb" transform="translate(85.333333, 64.000000)"> <path id="database-svgg" d="M341.333333,234.666667 L341.333333,298.666667 C341.333333,345.794965 264.923264,384 170.666667,384 C78.5046604,384 3.40481618,347.4741 0.11255743,301.795012 L1.42108547e-14,298.666667 L1.42108547e-14,234.666667 L0.11255743,237.795012 C3.40481618,283.4741 78.5046604,320 170.666667,320 C264.923264,320 341.333333,281.794965 341.333333,234.666667 L341.333333,234.666667 Z M0.11255743,131.128346 C3.40481618,176.807434 78.5046604,213.333333 170.666667,213.333333 C264.923264,213.333333 341.333333,175.128299 341.333333,128 L341.333333,128 L341.333333,192 L341.310469,193.411143 C339.803347,239.888579 263.980698,277.333333 170.666667,277.333333 C78.5046604,277.333333 3.40481618,240.807434 0.11255743,195.128346 L0.11255743,195.128346 L1.42108547e-14,192 L1.42108547e-14,128 Z M170.666667,1.42108547e-14 C262.828673,1.42108547e-14 337.928517,36.5258998 341.220776,82.2049877 L341.333333,85.3333333 L341.310469,86.744476 C339.803347,133.221912 263.980698,170.666667 170.666667,170.666667 C78.5046604,170.666667 3.40481618,134.140767 0.11255743,88.4616789 L0.11255743,88.4616789 L1.42108547e-14,85.3333333 C1.42108547e-14,38.2050347 76.4100694,1.42108547e-14 170.666667,1.42108547e-14 Z" id="Combined-Shape"> </path> </g> </g> </g></svg>
-                </div>
-                <div class="table-icon-svg" title="Database Table">
-                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f4f6fb"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="table-svgg" d="M4 9.5H20M4 14.5H20M9 4.5V19.5M7.2 19.5H16.8C17.9201 19.5 18.4802 19.5 18.908 19.282C19.2843 19.0903 19.5903 18.7843 19.782 18.408C20 17.9802 20 17.4201 20 16.3V7.7C20 6.5799 20 6.01984 19.782 5.59202C19.5903 5.21569 19.2843 4.90973 18.908 4.71799C18.4802 4.5 17.9201 4.5 16.8 4.5H7.2C6.0799 4.5 5.51984 4.5 5.09202 4.71799C4.71569 4.90973 4.40973 5.21569 4.21799 5.59202C4 6.01984 4 6.57989 4 7.7V16.3C4 17.4201 4 17.9802 4.21799 18.408C4.40973 18.7843 4.71569 19.0903 5.09202 19.282C5.51984 19.5 6.07989 19.5 7.2 19.5Z" stroke="#f4f6fb" stroke-width="2"></path> </g></svg>
-                </div>
-            </ul>
-        </div>
-        <div class="logout-icon-svg" title="logout">
-            <!-- <span class="settings-icon"><a href="">Settings Icon</a></span> -->
-            <!-- <svg fill="#f6fbf4" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#f6fbf4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>logout</title> <path d="M0 9.875v12.219c0 1.125 0.469 2.125 1.219 2.906 0.75 0.75 1.719 1.156 2.844 1.156h6.125v-2.531h-6.125c-0.844 0-1.5-0.688-1.5-1.531v-12.219c0-0.844 0.656-1.5 1.5-1.5h6.125v-2.563h-6.125c-1.125 0-2.094 0.438-2.844 1.188-0.75 0.781-1.219 1.75-1.219 2.875zM6.719 13.563v4.875c0 0.563 0.5 1.031 1.063 1.031h5.656v3.844c0 0.344 0.188 0.625 0.5 0.781 0.125 0.031 0.25 0.031 0.313 0.031 0.219 0 0.406-0.063 0.563-0.219l7.344-7.344c0.344-0.281 0.313-0.844 0-1.156l-7.344-7.313c-0.438-0.469-1.375-0.188-1.375 0.563v3.875h-5.656c-0.563 0-1.063 0.469-1.063 1.031z"></path> </g></svg> -->
-            <a href="{{ url_for('auth.logout') }}" class="home-logout-btn">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="" stroke-width="0"></g><g id="" stroke-linecap="round" stroke-linejoin="round"></g><g id=""> <path id="logout_svgg" stroke="#f6fbf4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12h-9.5m7.5 3l3-3-3-3m-5-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h5a2 2 0 002-2v-1"></path> </g></svg>
-            </a>
+        <div class="nav-content">
+            <div class="nav-logo">
+                R<span class="emphasis">.</span>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <div class="dashboard-icon-svg" title="Dashboard">
+                        <svg fill="#f6fbf4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="dashboard-svgg" class="icon glyph" stroke="#f6fbf4"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><rect x="2" y="2" width="9" height="11" rx="2"></rect><rect x="13" y="2" width="9" height="7" rx="2"></rect><rect x="2" y="15" width="9" height="7" rx="2"></rect><rect x="13" y="11" width="9" height="11" rx="2"></rect></g></svg>
+                    </div>
+                    <div class="database-icon-svg" title="Database Manager">
+                        <svg viewBox="0 0 512 512" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#f4f6fb" stroke="#f4f6fb"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="database-svgg" fill="#f4f6fb" transform="translate(85.333333, 64.000000)"> <path id="database-svgg" d="M341.333333,234.666667 L341.333333,298.666667 C341.333333,345.794965 264.923264,384 170.666667,384 C78.5046604,384 3.40481618,347.4741 0.11255743,301.795012 L1.42108547e-14,298.666667 L1.42108547e-14,234.666667 L0.11255743,237.795012 C3.40481618,283.4741 78.5046604,320 170.666667,320 C264.923264,320 341.333333,281.794965 341.333333,234.666667 L341.333333,234.666667 Z M0.11255743,131.128346 C3.40481618,176.807434 78.5046604,213.333333 170.666667,213.333333 C264.923264,213.333333 341.333333,175.128299 341.333333,128 L341.333333,128 L341.333333,192 L341.310469,193.411143 C339.803347,239.888579 263.980698,277.333333 170.666667,277.333333 C78.5046604,277.333333 3.40481618,240.807434 0.11255743,195.128346 L0.11255743,195.128346 L1.42108547e-14,192 L1.42108547e-14,128 Z M170.666667,1.42108547e-14 C262.828673,1.42108547e-14 337.928517,36.5258998 341.220776,82.2049877 L341.333333,85.3333333 L341.310469,86.744476 C339.803347,133.221912 263.980698,170.666667 170.666667,170.666667 C78.5046604,170.666667 3.40481618,134.140767 0.11255743,88.4616789 L0.11255743,88.4616789 L1.42108547e-14,85.3333333 C1.42108547e-14,38.2050347 76.4100694,1.42108547e-14 170.666667,1.42108547e-14 Z" id="Combined-Shape"> </path> </g> </g> </g></svg>
+                    </div>
+                    <div class="table-icon-svg" title="Database Table">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#f4f6fb"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path id="table-svgg" d="M4 9.5H20M4 14.5H20M9 4.5V19.5M7.2 19.5H16.8C17.9201 19.5 18.4802 19.5 18.908 19.282C19.2843 19.0903 19.5903 18.7843 19.782 18.408C20 17.9802 20 17.4201 20 16.3V7.7C20 6.5799 20 6.01984 19.782 5.59202C19.5903 5.21569 19.2843 4.90973 18.908 4.71799C18.4802 4.5 17.9201 4.5 16.8 4.5H7.2C6.0799 4.5 5.51984 4.5 5.09202 4.71799C4.71569 4.90973 4.40973 5.21569 4.21799 5.59202C4 6.01984 4 6.57989 4 7.7V16.3C4 17.4201 4 17.9802 4.21799 18.408C4.40973 18.7843 4.71569 19.0903 5.09202 19.282C5.51984 19.5 6.07989 19.5 7.2 19.5Z" stroke="#f4f6fb" stroke-width="2"></path> </g></svg>
+                    </div>
+                </ul>
+            </div>
+            <div class="logout-icon-svg" title="logout">
+                <a href="{{ url_for('auth.logout') }}" class="home-logout-btn">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none"><g id="" stroke-width="0"></g><g id="" stroke-linecap="round" stroke-linejoin="round"></g><g id=""> <path id="logout_svgg" stroke="#f6fbf4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12h-9.5m7.5 3l3-3-3-3m-5-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2h5a2 2 0 002-2v-1"></path> </g></svg>
+                </a>
+            </div>
         </div>
     </div>
     <div class="content-container">
-        <h1>DASHBOARD PAGE</h1>
-        <div class="file-upload-test">
-            <label for="file-input">Upload Data File</label>
-            <input type="file" id="file-input" class="file-input" onchange="validateFileType()">
-            <br>
-            <div id="file-error-mssg"></div>
+        <h1 class="dash-header">DASHBOARD</h1>
+        <p class="hero-card-p resize-60">Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+        <div class="home-content">
+            <div class="dash-left-side">
+                <h3 class="dash-subheader">FORM FIELD UPLOAD</h3>
+                <form method="POST" name="database-upload-form">
+                    <div class="file-group">
+                        <div class="file-input-group fheader">
+                            <h3 class="file-input-header">Column Name</h3>
+                            <h3 class="file-input-header">Column Data</h3>
+                        </div>
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="firstName">first_name</label>
+                            <input class="file-input-field" id="firstName" name="firstName" type="text" required>
+                        </div>
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="lastName">last_name</label>
+                            <input name="lastName" class="file-input-field" id="lastName" type="text" required>
+                        </div>
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="email">email</label>
+                            <input name="email" class="file-input-field" id="email" type="email">
+                        </div>
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="phoneNumber">phone_number</label>
+                            <input name="phoneNumber" class="file-input-field" id="phoneNumber" type="text" required>
+                                <!-- Check if input is valid -->
+                        </div>
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="dateOfBirth">date_of_birth</label>
+                            <input name="dateOfBirth" class="file-input-field" id="dateOfBirth" type="date">
+                                <!-- Check if input is valid -->
+                        </div>
+                        <!-- <div class="file-input-group"> -->
+                        <!--     <label class="file-input-label" for="region">region</label> -->
+                        <!--     <input class="file-input-field" id="region" type="text"> -->
+                        <!--         <!-- Check if input is valid -->
+                        <!-- </div> -->
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="gender">gender</label>
+                            <select id="gender" class="file-input-field" name="gender" required>
+                                <option value="">-Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+                        <!-- <div class="file-input-group"> -->
+                        <!--     <label class="file-input-label" for="occupation">occupation</label> -->
+                        <!--     <input class="file-input-field" id="occupation" type="text"> -->
+                        <!-- </div> -->
+                        <!-- <div class="file-input-group"> -->
+                        <!--     <label class="file-input-label" for="marital_status">marital_status</label> -->
+                        <!--     <select id="marital_status" class="file-input-field" name="marital_status"> -->
+                        <!--         <option value="">-Select marital status</option> -->
+                        <!--         <option value="Single">Single</option> -->
+                        <!--         <option value="Married">Married</option> -->
+                                <!-- <option value="Widowed">Widowed</option> -->
+                                <!-- <option value="Seperated">Seperated</option> -->
+                                <!-- <option value="Divorced">Divorced</option> -->
+                        <!--     </select> -->
+                        <!-- </div> -->
+                    </div>
+                    <input type="submit" value="Add to Database" class="submit-btn mg-tp" onclick="sendFormData()">
+                </form>
+            </div>
+            <div class="dash-right-side">
+                <div class="form-break"><div class="dash"></div>or<div class="dash"></div></div>
+                <h2 class="dash-subheader">UPLOAD DATA FROM CSV OR EXCEL</h2>
+                <form action="" method="POST" enctype="multipart/form-data">
+                    <div class="file-upload-group">
+                        <input type="file" name="file" class="file-input" id="fileInput" onchange="validateFileType()">
+                        <button type="button" class="file-submit-btn" id="file-submit" onclick="uploadFile()">Upload</button>
+                    </div>
+                    <div id="file-error-mssg"></div>
+                </form>
+            </div>
         </div>
+        <!-- <div class="status-line">Shows Upload status or errors</div> -->
+        <div class="dash-footer"></div>
     </div>
 </div>
 {% endblock %}
