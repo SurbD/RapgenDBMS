@@ -1,4 +1,4 @@
-from flask import request
+from flask import request, flash
 import sqlalchemy as db
 import pandas as pd
 import os
@@ -20,8 +20,22 @@ def upload_file():
         print("Columns Mismatch! ", err)
     else:
         file_data.to_sql(name='rapgen_db', if_exists='append', con=con, index=False)
-        print('WAS here')
         result = 'success'
     finally:
-        print("Done")
         return {'result': result}
+
+@api.route("/upload-form", methods=["POST"])
+def upload_form():
+    data = request.get_json()
+    print(data)
+    return { 'status': 'Nothing Here' }
+
+@api.route("/validate-email", methods=["POST"])
+def validate_email():
+    """
+    Checks for email if it exists in the database and return true or false
+    """
+
+    data = request.get_json()
+    print(data, "Email")
+    return {'exists': True}

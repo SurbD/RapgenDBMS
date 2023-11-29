@@ -7,7 +7,7 @@ function closeAlert() {
         flash_card.classList.add("close-animation")
         setTimeout(() => {
             flash_card.style.display = "none"
-            flash-card.classList.remove("close-animation")
+            flash_card.classList.remove("close-animation")
         }, 500)
         // window.location.href = "https://www.github.com/SurbD"; // Testing Redirect 
     }

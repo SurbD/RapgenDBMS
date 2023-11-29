@@ -72,3 +72,19 @@ class ConnDB:
     @staticmethod
     def init_app():
         pass
+
+    def add_data(self, data: dict):
+        with self.connection:
+            self.cursor.execute("""INSERT INTO rapgen_db 
+            (first_name, last_name, email, gender, date_of_birth, phone-number) 
+            VALUES (%(first_name)s, %(last_name)s, %(email)s, %(gender)s, %(date_of_birth)s, %(phone_number)s)
+            """, data)
+        return self.get_last_column()
+
+    def get_last_column(self):
+        with self.connection:
+            self.cursorx.execute("SELECT * FROM rapgen_db ORDER BY id DESC LIMIT 1;")
+            return self.cursorx.fetchone()
+    
+    def email_exists(self):
+        pass

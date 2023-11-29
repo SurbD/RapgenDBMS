@@ -33,7 +33,8 @@
         </main>
             
         {% block scripts %}
-        <script defer src="{{ url_for('static', filename='js/main.js')}}" crossorigin="anonymous"></script>
+        <script defer src="{{ url_for('static', filename='js/validate.js') }}" crossorigin="anonymous"></script>
+        <script defer src="{{ url_for('static', filename='js/main.js') }}" crossorigin="anonymous"></script>
         {% endblock %}
     </body>
 </html>
