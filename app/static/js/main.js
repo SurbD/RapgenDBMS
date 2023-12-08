@@ -87,16 +87,16 @@ function uploadFile() {
     }
 }
 
-function sendFormData() {
-    console.log('clicked Submit')
-    const form_data = document.forms['database-upload-form']
-    const data = {
-        first_name: form_data['firstName'].value,
-        last_name: form_data['lastName'].value,
-        email: form_data['email'].value,
-        phone_number: form_data['phoneNumber'].value,
-        date_of_birth: form_data['dateOfBirth'].value,
-        gender: form_data['gender'].value
-    }
-    console.log(data);
-}
+// function sendFormData() {
+//     console.log('clicked Submit')
+//     const form_data = document.forms['database-upload-form']
+//     const data = {
+//         first_name: form_data['firstName'].value,
+//         last_name: form_data['lastName'].value,
+//         email: form_data['email'].value,
+//         phone_number: form_data['phoneNumber'].value,
+//         date_of_birth: form_data['dateOfBirth'].value,
+//         gender: form_data['gender'].value
+//     }
+//     console.log(data);
+// }

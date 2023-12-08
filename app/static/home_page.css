@@ -60,7 +60,6 @@
 }
 
 .dashboard-icon-svg svg {
-    /* fill: var(--accent); */
     width: 34px;
     height: 34px;
     transition: all 0.3s ease 0s;
@@ -117,8 +116,8 @@
 
 
 .file-input::-webkit-file-upload-button {
-    color: var(--gray200);
-    font-weight: 700;
+    color: var(--deep-gray);
+    font-weight: 800;
     padding: 0.5rem 0.8rem;
     border: none;
     background-color: var(--accent);
@@ -230,6 +229,41 @@
 }
 
 .invalid-file-form {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
+    /* border: none; */
+    outline: none;
     border: 1px solid red;
+}
+
+.phone-input-fields {
+    display: flex;
+    width: 100%;
+}
+
+.phone-input-fields .number-code {
+    display: flex;
+    /* background-color: var(--accent); */
+    padding: 0.6rem;
+    align-items: center;
+    border: 1px solid var(--gray400);
+    border-radius: var(--bdrad) 0 0 var(--bdrad);
+
+    /* font-weight: bold; */
+    color: var(--gray200);
+}
+
+.phone-input-fields .file-input-field {
+    width: 100%;
+    border-radius: 0 var(--bdrad) var(--bdrad) 0;
+    outline: none;
+    /* border: 2px solid var(--gray200); */
+    border-left: none;
+} 
+
+.phone-input-fields .file-input-field:focus{
+    border-color: var(--gray200);
+    border-left: none;
+}
+.phone-input-fields .invalid-file-form:focus {
+    border-color: red;
 }

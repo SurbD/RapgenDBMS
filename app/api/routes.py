@@ -1,7 +1,10 @@
-from flask import request, flash
-import sqlalchemy as db
-import pandas as pd
 import os
+
+import pandas as pd
+import sqlalchemy as db
+from flask import flash, request
+
+from app import db_conn
 
 from . import api
 
@@ -10,7 +13,8 @@ con = db.create_engine(os.environ.get("SQLALCHEMY_DATABASE_URI"))
 @api.route("/upload-file", methods=["POST"])
 def upload_file():
     file = request.files['file']
-    usecols = ['first_name', 'last_name', 'email', 'gender', 'date_of_birth', 'phone_number']
+    usecols = ['first_name', 'last_name', 'email', 'gender',
+               'date_of_birth', 'phone_number', 'region', 'role']
     result = 'Undefined'
 
     try:
@@ -28,6 +32,11 @@ def upload_file():
 def upload_form():
     data = request.get_json()
     print(data)
+
+    with db_conn as connx:
+        result = connx.add_data(data)
+        print('result -psycopg2 -- ', result)
+
     return { 'status': 'Nothing Here' }
 
 @api.route("/validate-email", methods=["POST"])
@@ -37,5 +46,14 @@ def validate_email():
     """
 
     data = request.get_json()
-    print(data, "Email")
-    return {'exists': True}
+    email = data.get('email').lower()
+    first_name = data.get('first_name')
+    exists, result = False, None
+
+    with db_conn:
+        result = db_conn.user_exists(first_name, email)
+        print(result)
+        if result:
+            exists = True
+
+    return {'exists': exists}

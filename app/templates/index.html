@@ -55,42 +55,41 @@
                         </div>
                         <div class="file-input-group">
                             <label class="file-input-label" for="phoneNumber">phone_number</label>
-                            <input name="phoneNumber" class="file-input-field" id="phoneNumber" placeholder="+234-###-###-####" type="text" required>
-                                <!-- Check if input is valid -->
+                            <!-- <input name="phoneNumber" class="file-input-field" id="phoneNumber" placeholder="+234-###-###-####" type="text" required> -->
+                            <div class="phone-input-fields">
+                                <span class="number-code">+234</span>
+                                <input name="phoneNumber" class="file-input-field" id="phoneNumber" placeholder="123-456-7890" required>
+                            </div>  
                         </div>
                         <div class="file-input-group">
                             <label class="file-input-label" for="dateOfBirth">date_of_birth</label>
                             <input name="dateOfBirth" class="file-input-field" id="dateOfBirth" type="date">
-                                <!-- Check if input is valid -->
                         </div>
-                        <!-- <div class="file-input-group"> -->
-                        <!--     <label class="file-input-label" for="region">region</label> -->
-                        <!--     <input class="file-input-field" id="region" type="text"> -->
-                        <!--         <!-- Check if input is valid -->
-                        <!-- </div> -->
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="region">region</label>
+                            <select id="region" class="file-input-field" name="region" required>
+                                <option value="">Select Region</option>
+                                <option value="Epe">Epe</option>
+                                <option value="Mainland">Mainland</option>
+                            </select>
+                        </div>
                         <div class="file-input-group">
                             <label class="file-input-label" for="gender">gender</label>
                             <select id="gender" class="file-input-field" name="gender" required>
-                                <option value="">-Select Gender</option>
+                                <option value="">Select Gender</option>
                                 <option value="Male">Male</option>
                                 <option value="Female">Female</option>
                             </select>
                         </div>
-                        <!-- <div class="file-input-group"> -->
-                        <!--     <label class="file-input-label" for="occupation">occupation</label> -->
-                        <!--     <input class="file-input-field" id="occupation" type="text"> -->
-                        <!-- </div> -->
-                        <!-- <div class="file-input-group"> -->
-                        <!--     <label class="file-input-label" for="marital_status">marital_status</label> -->
-                        <!--     <select id="marital_status" class="file-input-field" name="marital_status"> -->
-                        <!--         <option value="">-Select marital status</option> -->
-                        <!--         <option value="Single">Single</option> -->
-                        <!--         <option value="Married">Married</option> -->
-                                <!-- <option value="Widowed">Widowed</option> -->
-                                <!-- <option value="Seperated">Seperated</option> -->
-                                <!-- <option value="Divorced">Divorced</option> -->
-                        <!--     </select> -->
-                        <!-- </div> -->
+                        <div class="file-input-group">
+                            <label class="file-input-label" for="role">role</label>
+                            <select id="role" class="file-input-field" name="role" required>
+                                <option value="">Select Role</option>
+                                <option value="visitor">Visitor</option>
+                                <option value="member">Member</option>
+                                <option value="stakeholder">Stake Holder</option>
+                            </select>
+                        </div>
                     </div>
                     <input type="submit" value="Add to Database" class="submit-btn mg-tp">
                 </form>
