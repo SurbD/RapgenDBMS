@@ -155,15 +155,15 @@ function checkFormValid() {
   let isValid = false;
   console.log("in form valid checker");
 
-  // if (email.value.length != 0) {
-  //   emailValidator()
-  //     .then((data) => {
-  //       validEmail = data.exists;
-  //       console.log(validEmail);
-  //       console.log("Email Valid");
-  //     })
-  //     .catch((err) => console.log(err));
-  // }
+  if (email.value.length != 0) {
+    emailValidator()
+      .then((data) => {
+        validEmail = data.exists;
+        console.log(validEmail);
+        console.log("Email Valid");
+      })
+      .catch((err) => console.log(err));
+  }
 
   if (formValid && (validEmail == null || validEmail == false)) {
     isValid = true;
